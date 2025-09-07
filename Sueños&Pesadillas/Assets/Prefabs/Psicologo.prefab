@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5672504735474428667}
   - component: {fileID: 843088647032102101}
   - component: {fileID: 5835378740105182618}
-  - component: {fileID: 1509351876214507575}
   - component: {fileID: 2323219899630769109}
+  - component: {fileID: 1105412723518347757}
+  - component: {fileID: 1364186151984112759}
   m_Layer: 0
   m_Name: Psicologo
   m_TagString: Player
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1246796568706635245, guid: 6452a645db897574b9869769aa7a88f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106,8 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b58dc53e83c788448df42053526a774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidaCounter: {fileID: 11400000, guid: 3a4b4f9f73b3be747b33d8f59068246e, type: 2}
   speed: 5
-  vida: 100
+  vida: 3
 --- !u!61 &5672504735474428667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,7 +140,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -203,7 +205,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1509351876214507575
+--- !u!114 &2323219899630769109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190677148908767740}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613360e99b6b3f541bfe233a101aa12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaData: {fileID: 0}
+  playerMovement: {fileID: 2226088966217586293}
+  imagenCorazon: {fileID: 0}
+  corazonSano: {fileID: 8696142073346629285, guid: 5405677d5080de8438833a9ef397eded, type: 3}
+  corazonAgrietado: {fileID: -4752932868970398028, guid: 5405677d5080de8438833a9ef397eded, type: 3}
+  "corazonMuyDa\xF1ado": {fileID: -4057253508103832894, guid: 5405677d5080de8438833a9ef397eded, type: 3}
+  corazonRoto: {fileID: 99116736302572420, guid: 5405677d5080de8438833a9ef397eded, type: 3}
+  deathScreen: {fileID: 4783999534704602782}
+--- !u!114 &1105412723518347757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,20 +239,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escenaMundoNormal: MundoNormal
   escenaMundoOscuro: MundoOscuro
---- !u!114 &2323219899630769109
-MonoBehaviour:
+  transitionAnimator: {fileID: 0}
+  TransitionTime: 0.25
+--- !u!58 &1364186151984112759
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3190677148908767740}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613360e99b6b3f541bfe233a101aa12a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vidaMaxima: 100
-  deathScreen: {fileID: 4783999534704602782}
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.6331702}
+  m_Radius: 0.3668298
 --- !u!1 &4783999534704602782
 GameObject:
   m_ObjectHideFlags: 0

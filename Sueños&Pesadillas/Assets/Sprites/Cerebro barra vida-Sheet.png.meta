@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 5405677d5080de8438833a9ef397eded
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8696142073346629285
+    second: Cerebro barra vida-Sheet_0
+  - first:
+      213: -4752932868970398028
+    second: Cerebro barra vida-Sheet_1
+  - first:
+      213: -4057253508103832894
+    second: Cerebro barra vida-Sheet_2
+  - first:
+      213: 99116736302572420
+    second: Cerebro barra vida-Sheet_3
+  - first:
+      213: -3719565470387340107
+    second: Cerebro barra vida-Sheet_4
+  - first:
+      213: 7086415358621443384
+    second: Cerebro barra vida-Sheet_5
+  - first:
+      213: 3627260696033204335
+    second: Cerebro barra vida-Sheet_6
+  - first:
+      213: 8368071601790379986
+    second: Cerebro barra vida-Sheet_7
+  - first:
+      213: 3352029682781222049
+    second: Cerebro barra vida-Sheet_8
+  - first:
+      213: 730699625184998973
+    second: Cerebro barra vida-Sheet_9
+  - first:
+      213: 8178207635415539377
+    second: Cerebro barra vida-Sheet_10
+  - first:
+      213: 2628508415286122679
+    second: Cerebro barra vida-Sheet_11
+  - first:
+      213: -3199367137221823444
+    second: Cerebro barra vida-Sheet_12
+  - first:
+      213: -4514500946364412999
+    second: Cerebro barra vida-Sheet_13
+  - first:
+      213: 7292928063286090021
+    second: Cerebro barra vida-Sheet_14
+  - first:
+      213: 5624947964285232975
+    second: Cerebro barra vida-Sheet_15
+  - first:
+      213: 5495424143270818338
+    second: Cerebro barra vida-Sheet_16
+  - first:
+      213: -8741092178040970442
+    second: Cerebro barra vida-Sheet_17
+  - first:
+      213: 567538748345055096
+    second: Cerebro barra vida-Sheet_18
+  - first:
+      213: 2078274809338330416
+    second: Cerebro barra vida-Sheet_19
+  - first:
+      213: 5687021200227984149
+    second: Cerebro barra vida-Sheet_20
+  - first:
+      213: -6915340280251302398
+    second: Cerebro barra vida-Sheet_21
+  - first:
+      213: 3966557932251386047
+    second: Cerebro barra vida-Sheet_22
+  - first:
+      213: -3085851451577926446
+    second: Cerebro barra vida-Sheet_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae972e3427eea870800000000000000
+      internalID: 8696142073346629285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bebdbfdcb03a0eb0800000000000000
+      internalID: -4752932868970398028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca73cd3e6db1b7c0800000000000000
+      internalID: -4057253508103832894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4836c928522206100800000000000000
+      internalID: 99116736302572420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcf0ca69e2716cc0800000000000000
+      internalID: -3719565470387340107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835e0852931085260800000000000000
+      internalID: 7086415358621443384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f689bce826e965230800000000000000
+      internalID: 3627260696033204335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cerebro barra vida-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d7efbf29cc512470800000000000000
+      internalID: 8368071601790379986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f07ebd2cfb6d52144bab9154ca3485eb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cerebro barra vida-Sheet_0: 8696142073346629285
+      Cerebro barra vida-Sheet_1: -4752932868970398028
+      Cerebro barra vida-Sheet_2: -4057253508103832894
+      Cerebro barra vida-Sheet_3: 99116736302572420
+      Cerebro barra vida-Sheet_4: -3719565470387340107
+      Cerebro barra vida-Sheet_5: 7086415358621443384
+      Cerebro barra vida-Sheet_6: 3627260696033204335
+      Cerebro barra vida-Sheet_7: 8368071601790379986
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

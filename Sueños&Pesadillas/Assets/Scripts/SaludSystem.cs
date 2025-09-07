@@ -1,68 +1,70 @@
 using UnityEngine;
-using UnityEngine.UIElements;
-
+using UnityEngine.UI;
 
 public class SaludSystem : MonoBehaviour
 {
-   
 
-    public float vidaMaxima = 100f;
-    private float vidaActual;
+    public Vida_Counter vidaData; // Asigna en el Inspector
 
-    public GameObject deathScreen; // Asigna el panel en el inspector
+    [Header("Referencias")]
+    public PlayerMovement playerMovement; // El script que guarda la vida real del jugador
+    public Image imagenCorazon;           // La imagen en el Canvas
+
+    [Header("Sprites del corazón")]
+    public Sprite corazonSano;
+    public Sprite corazonAgrietado;
+    public Sprite corazonMuyDañado;
+    public Sprite corazonRoto;
+
+    [Header("Pantalla de Muerte")]
+    public GameObject deathScreen;
 
     private bool estaMuerto = false;
 
-    public Slider healthSlider;
     void Start()
     {
-        vidaActual = vidaMaxima;
-        
-        healthSlider.value = vidaMaxima ;
-        healthSlider.value = vidaActual;
+        ActualizarCorazon();
 
         if (deathScreen != null)
-            deathScreen.SetActive(false); // Asegura que esté oculta al comenzar
+            deathScreen.SetActive(false);
     }
 
-    public void PerderVida(float cantidad)
+    void Update()
     {
-        if (estaMuerto) return;
+        ActualizarCorazon();
+    }
 
-        vidaActual -= cantidad;
-        if (vidaActual < 0)
-            vidaActual = 0;
-        Debug.Log("Vida actual: " + vidaActual);
+   
 
-        healthSlider.value = vidaActual;
+    private void ActualizarCorazon()
+    {
+        int vidaActual = vidaData.vidaActual;
 
-        if (vidaActual <= 0)
+        switch (vidaActual)
         {
-            Debug.Log("Vida llegó a 0, llamando a Morir()");
-            Morir();
+            case 3:
+                imagenCorazon.sprite = corazonSano;
+                break;
+            case 2:
+                imagenCorazon.sprite = corazonAgrietado;
+                break;
+            case 1:
+                imagenCorazon.sprite = corazonMuyDañado;
+                break;
+            default:
+                imagenCorazon.sprite = corazonRoto;
+                break;
+        }
+
+        if (vidaActual <= 0 && !estaMuerto)
+        {
+            estaMuerto = true;
+            playerMovement.Morir();
+
+            if (deathScreen != null)
+                deathScreen.SetActive(true);
         }
     }
 
 
-
-    private void Morir()
-    {
-        estaMuerto = true;
-
-        Debug.Log("Activando deathScreen");  // <-- Aquí
-
-        if (deathScreen != null)
-        {
-            deathScreen.SetActive(true);
-        }
-
-        // Inicia corrutina para pausar el juego después de un pequeño retraso
-        StartCoroutine(PausarJuegoConRetraso());
-    }
-
-    private System.Collections.IEnumerator PausarJuegoConRetraso()
-    {
-        yield return new WaitForSecondsRealtime(0.1f); // espera real (no se ve afectada por Time.timeScale)
-        Time.timeScale = 0f;
-    }
 }

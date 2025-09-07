@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,9 @@ public class WorldSwitcherScene : MonoBehaviour
 
     private bool enMundoOscuro;
 
+    public Animator transitionAnimator;
+
+    [SerializeField]private float TransitionTime = 1f;
     void Start()
     {
         // Restaurar estado del mundo
@@ -46,9 +50,21 @@ public class WorldSwitcherScene : MonoBehaviour
         PlayerPrefs.Save();
 
         // Cargar la nueva escena
+     
+        StartCoroutine(SceneLoad());
+    }
+
+    public IEnumerator SceneLoad()
+    {
+        // Iniciar la animación de transición
+        transitionAnimator.SetTrigger("StartTransition");
+        // Esperar un momento para que la animación se complete
+        yield return new WaitForSeconds(TransitionTime);
+        // Cargar la nueva escena
         if (enMundoOscuro)
             SceneManager.LoadScene(escenaMundoOscuro);
         else
             SceneManager.LoadScene(escenaMundoNormal);
+
     }
 }

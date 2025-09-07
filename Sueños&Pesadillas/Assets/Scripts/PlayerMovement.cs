@@ -3,17 +3,25 @@ using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Vida_Counter vidaCounter; // Referencia al ScriptableObject de vida
+
     public float speed = 5f; // Velocidad del jugador
 
     private Rigidbody2D rb;
     private Animator animator; // Referencia al Animator
     private Vector2 movement;  // Dirección de movimiento
 
-    public float vida = 100;
+    public float vida = 3;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Obtenemos el Animator del jugador
+
+        if (vidaCounter != null)
+        {
+            vidaCounter.ResetVida();
+        }
+           
     }
 
     void Update()
@@ -42,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void Morir()
+    public void Morir()
     {
        
         // Acá podés desactivar al jugador, reproducir animaciones o reiniciar escena
@@ -60,12 +68,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void TomarDaño(float daño)
     {
-        vida -= daño;
+        vidaCounter.vidaActual -= (int)daño;
 
-        if (vida <= 0f)
-        {
-            Morir();
-        }
-        
+        if (vidaCounter.vidaActual < 0)
+            vidaCounter.vidaActual = 0;
+
     }
 }
