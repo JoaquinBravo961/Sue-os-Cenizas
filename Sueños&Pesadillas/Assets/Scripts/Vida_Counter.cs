@@ -10,4 +10,11 @@ public class Vida_Counter : ScriptableObject
     {
         vidaActual = vidaMaxima;
     }
-}
+
+    // Elimina o comenta este método:
+    // private void OnEnable()
+    // {
+    //     vidaActual = vidaMaxima;
+    // }
+
+     }

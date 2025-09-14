@@ -24,3 +24,6 @@ public class Room : MonoBehaviour
         }
     }
 }
+
+
+

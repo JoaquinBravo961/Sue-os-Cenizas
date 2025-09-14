@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Vida_Counter
   m_EditorClassIdentifier: 
   vidaMaxima: 3
-  vidaActual: 3
+  vidaActual: 0

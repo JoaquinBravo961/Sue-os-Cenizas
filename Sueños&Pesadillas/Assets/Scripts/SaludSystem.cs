@@ -3,8 +3,9 @@ using UnityEngine.UI;
 
 public class SaludSystem : MonoBehaviour
 {
-
-    public Vida_Counter vidaData; // Asigna en el Inspector
+    public int vidaMaxima = 3;
+    public int vidaActual = 3;
+    //public Vida_Counter vidaData; // Asigna en el Inspector
 
     [Header("Referencias")]
     public PlayerMovement playerMovement; // El script que guarda la vida real del jugador
@@ -32,13 +33,45 @@ public class SaludSystem : MonoBehaviour
     void Update()
     {
         ActualizarCorazon();
+
+        // Guardar salud al presionar Q
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GuardarSalud();
+        }
+
+        // Recuperar salud al presionar E
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            RecuperarSalud();
+        }
     }
 
-   
+    private void GuardarSalud()
+    {
+        PlayerPrefs.SetInt("SaludGuardada", vidaActual);
+        Debug.Log("Salud guardada: " +vidaActual);
+    }
+
+    // Nuevo método para recuperar la salud
+    private void RecuperarSalud()
+    {
+        if (PlayerPrefs.HasKey("SaludGuardada"))
+        {
+            vidaActual = PlayerPrefs.GetInt("SaludGuardada");
+
+            Debug.Log("Salud recuperada: " + vidaActual);
+        }
+        else
+        {
+            Debug.Log("No hay salud guardada");
+        }
+    }
+
 
     private void ActualizarCorazon()
     {
-        int vidaActual = vidaData.vidaActual;
+        
 
         switch (vidaActual)
         {
