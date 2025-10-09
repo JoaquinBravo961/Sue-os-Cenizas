@@ -5,7 +5,19 @@ public class Llave : MonoBehaviour
 {
     public TipoLlave tipoLlave; // Seleccionás en el Inspector qué llave es
 
-    //Si el jugador entra en contacto, agrega la llave al inv
+    // Asignamos un color visual según el tipo de llave
+    private Color ObtenerColorPorTipo()
+    {
+        switch (tipoLlave)
+        {
+            case TipoLlave.Roja: return Color.red;
+            case TipoLlave.Azul: return Color.blue;
+            case TipoLlave.Verde: return Color.green;
+            case TipoLlave.Amarilla: return Color.yellow;
+            default: return Color.white;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -14,11 +26,12 @@ public class Llave : MonoBehaviour
             Inventario inv = other.GetComponent<Inventario>();
             if (inv != null)
             {
-                // Agrega la llave al inventario del jugador
                 inv.AgregarLlave(tipoLlave);
+
+                KeyUIManager.Instance?.AddKey(ObtenerColorPorTipo());
+
                 Destroy(gameObject);
             }
         }
     }
 }
-

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Scene_Suma : MonoBehaviour
@@ -21,4 +22,15 @@ public class Scene_Suma : MonoBehaviour
         SceneManager.LoadScene(EscenaActual + 1);// Cargar la siguiente escena en la secuencia
 
     }
+
+    // Cargar Creditos
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("Creditos");
+        }
+    }
 }
+

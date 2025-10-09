@@ -4,10 +4,12 @@ public class TipoLLave : MonoBehaviour
 {
     public enum TipoLlave
     {
-        Ninguna,      // por defecto
-        LlavePequena, // como en Zelda
-        LlaveGrande,
-        
+        Ninguna,
+        Roja,
+        Azul,
+        Verde,
+        Amarilla
     }
+
 
 }

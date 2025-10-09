@@ -7,7 +7,7 @@ public class Inventario : MonoBehaviour
     // Lista de llaves que posee el jugador
     public List<TipoLlave> llaves = new List<TipoLlave>();
 
-
+    
     //Agrega una llave al inventario si no la tiene ya
     public void AgregarLlave(TipoLlave tipo)
     {
